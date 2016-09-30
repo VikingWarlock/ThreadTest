@@ -48,12 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void showLine(String line){
         String origin=console.getText().toString();
-        origin+=("\n"+line);
+        origin=line+"\n"+origin;
         console.setText(origin);
-        if (console.getLineHeight()*console.getLineCount()>console.getBottom()){
-            int scroll_amount = console.getBottom();
-            console.scrollTo(0, scroll_amount);
-        }
     }
 
     private void addAction(){
